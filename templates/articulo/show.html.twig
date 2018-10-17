@@ -1,0 +1,28 @@
+
+{% extends 'base.html.twig' %}
+{% block title %} {{ titulo }} {%endblock%}
+{% block body %}
+{# cometarios! #}
+<h1>{{titulo}}</h1>
+<div>
+    <p>{{contenido}}</p>
+</div>
+<h2>Comentarios({{comentarios|length}})</h2>
+<ul>
+{% for comentario in comentarios %}
+    <li>{{ comentario }}</li>
+{% endfor %}
+</ul>
+<p>
+{{ 'text'|capitalize }}
+</p>
+
+<p>
+  {%  if comentarios|length == 3   %}
+       <p>Es mayor a 3</p>
+  {% else %}
+       <p>No es igual</p>
+  {% endif %}
+</p>
+{% endblock %}
+
