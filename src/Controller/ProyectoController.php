@@ -29,10 +29,16 @@ class ProyectoController extends AbstractController
                 'comentario2',
                 'comentario3'
         ];
+        $matriculas = [
+        		'U991234',
+        		'U995678',
+        		'U999876'
+        ];
         return $this->render('articulo/show.html.twig',[
  			'titulo' => ucwords(str_replace('-', ' ', $variable)),
  			'contenido' => ucwords(str_replace('-', ' ', 'Está es una prueba symfony')),
- 			'comentarios' =>  $comentarios
+ 			'comentarios' =>  $comentarios,
+ 			'matriculas' => $matriculas
         ]);
     }
 }
