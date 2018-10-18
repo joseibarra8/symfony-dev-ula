@@ -32,7 +32,8 @@ class ProyectoController extends AbstractController
         $matriculas = [
         		'U991234',
         		'U995678',
-        		'U999876'
+        		'U999876',
+        		'U999879'
         ];
         return $this->render('articulo/show.html.twig',[
  			'titulo' => ucwords(str_replace('-', ' ', $variable)),
